@@ -5,6 +5,7 @@
 ### Estado del código
 [![Build Status](https://travis-ci.org/MRxRafi/iwvg-devops-rafael-tome.svg?branch=develop)](https://travis-ci.org/MRxRafi/iwvg-devops-rafael-tome)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-rafael-tome&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-rafael-tome)
+[![BCH compliance](https://bettercodehub.com/edge/badge/MRxRafi/iwvg-devops-rafael-tome?branch=develop)](https://bettercodehub.com/)
 
 ### :gear: Instalación del proyecto
 1. Clonar el repositorio en tu equipo, **mediante consola**:
