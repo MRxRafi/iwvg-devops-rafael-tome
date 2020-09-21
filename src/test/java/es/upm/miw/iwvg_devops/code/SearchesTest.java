@@ -33,4 +33,15 @@ class SearchesTest {
         assertEquals(1, addedFractionSecond.getNumerator());
         assertEquals(1, addedFractionSecond.getNumerator());
     }
+
+    @Test
+    void testFindFirstFractionSubtractionByUserName(){
+        Fraction subtractedFractionFirst = new Searches().findFirstFractionSubtractionByUserName("Ana");
+        Fraction subtractedFractionSecond = new Searches().findFirstFractionSubtractionByUserName("Oscar");
+
+        assertEquals(11, subtractedFractionFirst.getNumerator());
+        assertEquals(5, subtractedFractionFirst.getDenominator());
+        assertEquals(-1, subtractedFractionSecond.getNumerator());
+        assertEquals(1, subtractedFractionSecond.getDenominator());
+    }
 }
