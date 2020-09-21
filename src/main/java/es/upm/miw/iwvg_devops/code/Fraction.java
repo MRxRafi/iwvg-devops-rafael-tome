@@ -56,6 +56,7 @@ public class Fraction {
     }
 
     public double decimal() {
+        if(denominator == 0) return 0.0;
         return (double) numerator / denominator;
     }
 

@@ -1,5 +1,7 @@
 package es.upm.miw.iwvg_devops.code;
 
+import org.apache.logging.log4j.LogManager;
+
 import java.util.Comparator;
 import java.util.stream.Stream;
 
