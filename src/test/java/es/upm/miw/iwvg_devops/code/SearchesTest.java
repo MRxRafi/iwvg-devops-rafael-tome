@@ -14,4 +14,12 @@ class SearchesTest {
                 new Searches().findDecimalFractionByUserName("Oscar")
                         .collect(Collectors.toList()));
     }
+
+    @Test
+    void testFindHighestFraction(){
+        Fraction highestFraction = new Searches().findHighestFraction();
+
+        assertEquals(2, highestFraction.getNumerator());
+        assertEquals(1, highestFraction.getDenominator());
+    }
 }
