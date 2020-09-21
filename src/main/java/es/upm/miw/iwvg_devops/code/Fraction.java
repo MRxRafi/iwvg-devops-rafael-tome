@@ -71,6 +71,9 @@ public class Fraction {
     }
 
     public Fraction add(Fraction otherFraction) {
+        if(this.isDenominatorNull()) return otherFraction;
+        if(otherFraction.isDenominatorNull()) return this;
+
         int newNumerator = numerator * otherFraction.getDenominator() + denominator * otherFraction.getNumerator();
         int newDenominator = denominator * otherFraction.getDenominator();
         return new Fraction(newNumerator, newDenominator);
@@ -86,6 +89,10 @@ public class Fraction {
         int newNumerator = numerator * otherFraction.getDenominator();
         int newDenominator = denominator * otherFraction.getNumerator();
         return new Fraction(newNumerator, newDenominator);
+    }
+
+    private boolean isDenominatorNull(){
+        return denominator == 0;
     }
 
     @Override
