@@ -1,7 +1,5 @@
 package es.upm.miw.iwvg_devops.code;
 
-import org.apache.logging.log4j.LogManager;
-
 import java.util.Comparator;
 import java.util.stream.Stream;
 
@@ -17,6 +15,14 @@ public class Searches {
         return new UsersDatabase().findAll()
                 .flatMap(user -> user.getFractions().stream())
                 .max(Comparator.comparingDouble(Fraction::decimal))
+                .orElseThrow();
+    }
+
+    public Fraction findFractionAdditionByUserId(String id){
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getId().equals(id))
+                .flatMap(user -> user.getFractions().stream())
+                .reduce((accumulatorFraction, nextFraction) -> accumulatorFraction.add(nextFraction))
                 .orElseThrow();
     }
 }

@@ -22,4 +22,15 @@ class SearchesTest {
         assertEquals(2, highestFraction.getNumerator());
         assertEquals(1, highestFraction.getDenominator());
     }
+
+    @Test
+    void testFindFractionAdditionByUserId(){
+        Fraction addedFractionFirst = new Searches().findFractionAdditionByUserId("4");
+        Fraction addedFractionSecond = new Searches().findFractionAdditionByUserId("6");
+
+        assertEquals(16, addedFractionFirst.getNumerator());
+        assertEquals(8, addedFractionFirst.getDenominator());
+        assertEquals(1, addedFractionSecond.getNumerator());
+        assertEquals(1, addedFractionSecond.getNumerator());
+    }
 }
